@@ -32,10 +32,12 @@ using UnityEngine;
 namespace Toolbar {
 	[KSPAddonFixed(KSPAddon.Startup.EveryScene, true, typeof(ToolbarManager))]
 	public partial class ToolbarManager : MonoBehaviour, IToolbarManager {
-		private static readonly string SETTINGS_FILE = KSPUtil.ApplicationRootPath + "GameData/toolbar-settings.dat";
-		internal const string FORUM_THREAD_URL = "http://forum.kerbalspaceprogram.com/index.php?/topic/55420-105-toolbar-1710-common-api-for-draggableresizable-buttons-toolbar/";
-		internal const string NAMESPACE_INTERNAL = "__TOOLBAR_INTERNAL";
+		//private static readonly string SETTINGS_FILE = KSPUtil.ApplicationRootPath + "GameData/toolbar-settings.dat";
+        private static readonly string SETTINGS_FILE = UnityEngine.Application.dataPath.ToString() + "GameData/toolbar-settings.dat";
 
+        internal const string FORUM_THREAD_URL = "http://forum.kerbalspaceprogram.com/index.php?/topic/55420-105-toolbar-1710-common-api-for-draggableresizable-buttons-toolbar/";
+		internal const string NAMESPACE_INTERNAL = "__TOOLBAR_INTERNAL";
+        
 		internal static ToolbarManager InternalInstance;
 
 		private HashSet<Command> commands_;

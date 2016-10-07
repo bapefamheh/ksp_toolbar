@@ -39,7 +39,8 @@ namespace Toolbar {
 			IEnumerable<AssemblyLoader.LoadedAssembly> assemblies = AssemblyLoader.loadedAssemblies
 					.Where(a => (a.assembly.GetName().Name == executingAssemblyName) && (a.url != "000_Toolbar"));
 			if (assemblies.Any()) {
-				Uri rootUri = new Uri(Path.GetFullPath(KSPUtil.ApplicationRootPath));
+                //Uri rootUri = new Uri(Path.GetFullPath(KSPUtil.ApplicationRootPath));
+                Uri rootUri = new Uri(Path.GetFullPath(UnityEngine.Application.dataPath));
 				IEnumerable<string> badPaths = assemblies
 					.Select(a => Uri.UnescapeDataString(rootUri.MakeRelativeUri(new Uri(a.path)).ToString().Replace('/', Path.DirectorySeparatorChar)));
 				PopupDialog.SpawnPopupDialog(new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f),

@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Desktop
+# Blend for Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toolbar", "Toolbar\Toolbar.csproj", "{E48DD7E6-5016-4ECF-A2C8-73A40BEAC326}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestButtons", "TestButtons\TestButtons.csproj", "{BDDFDD67-E023-41EA-B8F1-559996B9ADAE}"
